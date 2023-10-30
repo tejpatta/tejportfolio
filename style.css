@@ -1,12 +1,39 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  background-color: #FBE7C6;
+}
+header {
+  padding: 1.5rem;
+  font-family: Garamond, Georgia, 'Times New Roman', serif;
+  background-color: #B4F8C8;
+  color: palevioletred;
+  display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+}
+
+header nav {
+  padding-top: 1.5rem;
+  font-family: 'Avenir Next LT Pro', Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+/* this is to make the navigation links appear in-line next to each other*/
+
+header ul {
+  list-style-type: none;
+  display: inline-flex;
+}
+header ul li a {
+  margin: 0.5em;
+  text-decoration: none;
+  color: palevioletred
 }
 
 h1,
