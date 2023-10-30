@@ -33,7 +33,7 @@ header ul {
 header ul li a {
   margin: 0.5em;
   text-decoration: none;
-  color: palevioletred
+  color: palevioletred;
 }
 
 h1,
@@ -47,4 +47,36 @@ h6 {
 
 p {
   margin: 0;
+}
+.page-section{
+  padding: 2rem;
+}
+#herowork {
+  padding: calc(5rem + 1.5625vw);
+  background-image: url("./assets/radianthall.jpg");
+}
+
+#prework {
+ padding: calc(5rem + 1.5625vw);
+ background-image: url("./assets/clay.jpg")
+
+}
+
+#perfume{
+padding: calc(5rem + 1.5625vw);
+background-image: url("./assets/matt-briney-0tfz7ZoXaWc-unsplash.jpg");
+
+
+}
+#bookshelf {
+padding: calc(5rem + 1.5625vw);
+background-image: url("./assets/shelves.jpg");
+
+
+}
+#cocktails{
+padding: calc(5rem + 1.5625vw);
+background-image: url("./assets/cocktails.jpg");
+background-size: cover;
+
 }
