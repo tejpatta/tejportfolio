@@ -6,6 +6,7 @@
 
 body {
   background-color: #FBE7C6;
+  margin: 0;
 }
 header {
   padding: 1.5rem;
@@ -15,7 +16,7 @@ header {
   display: flex;
 				justify-content: space-between;
 				align-items: center;
-				flex-wrap: wrap;
+
 }
 
 header nav {
@@ -26,57 +27,98 @@ header nav {
 
 /* this is to make the navigation links appear in-line next to each other*/
 
-header ul {
+ul {
   list-style-type: none;
   display: inline-flex;
 }
-header ul li a {
+
+ul li a {
   margin: 0.5em;
   text-decoration: none;
   color: palevioletred;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
 .page-section{
   padding: 2rem;
+  margin: 2rem;
 }
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+#about img {
+  max-width: 20%;
+  max-height: 20%;
+  flex: 1;
+}
+#aboutmetext{
+  flex: 3;
+  margin: 7vw;
+}
+
+h4 {
+  color: rgb(129, 197, 174);
+  grid-area: workhead;
+}
+
+
 #herowork {
+  grid-area: herowork;
   padding: calc(5rem + 1.5625vw);
-  background-image: url("./assets/radianthall.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/radianthall.jpg");
 }
 
 #prework {
- padding: calc(5rem + 1.5625vw);
- background-image: url("./assets/clay.jpg")
+ grid-area: prework;
+  padding: calc(5rem + 1.5625vw);
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/clay.jpg");
+ 
 
 }
 
 #perfume{
-padding: calc(5rem + 1.5625vw);
-background-image: url("./assets/matt-briney-0tfz7ZoXaWc-unsplash.jpg");
-
+grid-area: perfume;
+  padding: calc(5rem + 1.5625vw);
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/matt-briney-0tfz7ZoXaWc-unsplash.jpg");
 
 }
 #bookshelf {
+grid-area: bookshelf;
 padding: calc(5rem + 1.5625vw);
-background-image: url("./assets/shelves.jpg");
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/shelves.jpg");
+
+
 
 
 }
 #cocktails{
+grid-area: cocktails;
 padding: calc(5rem + 1.5625vw);
-background-image: url("./assets/cocktails.jpg");
-background-size: cover;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/cocktails.jpg"); 
 
+}
+
+#contact{
+  font-family: Garamond, Georgia, 'Times New Roman', serif;
+  display: flex;
+				justify-content: space-between;
+				align-items: center;
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+
+  #work {
+    display: grid;
+    margin: 0px 5%;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "workhead workhead workead"
+    "herowork herowork prework"
+    "perfume bookshelf cocktails";
+  }
 }
