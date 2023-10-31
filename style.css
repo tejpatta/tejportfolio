@@ -28,26 +28,7 @@ header nav {
   font-family: 'Avenir Next LT Pro', Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
 }
-#herowork:hover{
-  opacity: 1;
-  
-  }
-#prework:hover{
-opacity: 1;
 
-}
-#perfume:hover{
-  opacity: 1;
-  
-  }
-  #bookshelf:hover{
-    opacity: 1;
-    
-    }
-    #cocktails:hover{
-      opacity: 1;
-      
-      }
 /* this is to make the navigation links appear in-line next to each other*/
 
 ul {
@@ -66,7 +47,7 @@ ul li a {
   padding: 2rem;
   margin: 2rem;
 }
-/*style 'About Me' content so that the image appears next to the text and the text is 3x the size, section styled as flexbox to make it reactive to window size*/
+/*style 'About Me' content, styled as flexbox to make it reactive to window size*/
 #about {
   display: flex;
   flex-direction: column;
@@ -102,6 +83,7 @@ div {
 /*make the divs inside the work section flexboxes to align the content to the bottom of them and control the growth of the herowork so it will appear larger than other divs*/
 
 /*style the individual divs, using a padding formula by Matthew James Taylor*/
+/*divs styled so that the opacity is low initially, later a hover affect is applied*/
 #herowork {
   flex: 4;
   grid-area: herowork;
@@ -171,6 +153,28 @@ display: flex;
 			justify-content: space-between;
 			align-items: center;
 }
+/*add the hover effect*/
+
+#herowork:hover{
+  opacity: 1;
+  
+  }
+#prework:hover{
+opacity: 1;
+
+}
+#perfume:hover{
+  opacity: 1;
+  
+  }
+#bookshelf:hover{
+opacity: 1;
+    
+    }
+    #cocktails:hover{
+  opacity: 1;
+ 
+      }
 
 /* media query for larger screens, grid layout for work section*/
 @media screen and (min-width: 700px) {
