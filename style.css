@@ -28,7 +28,26 @@ header nav {
   font-family: 'Avenir Next LT Pro', Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
 }
+#herowork:hover{
+  opacity: 1;
+  
+  }
+#prework:hover{
+opacity: 1;
 
+}
+#perfume:hover{
+  opacity: 1;
+  
+  }
+  #bookshelf:hover{
+    opacity: 1;
+    
+    }
+    #cocktails:hover{
+      opacity: 1;
+      
+      }
 /* this is to make the navigation links appear in-line next to each other*/
 
 ul {
@@ -50,19 +69,19 @@ ul li a {
 /*style 'About Me' content so that the image appears next to the text and the text is 3x the size, section styled as flexbox to make it reactive to window size*/
 #about {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
 }
 #about img {
-  max-width: 20%;
-  max-height: 20%;
-  flex: 1;
+  max-width: 60%;  
 }
 #aboutmetext{
   flex: 3;
   margin: 7vw;
 }
+
 /*style the headings*/
 h4 {
   color: rgb(110, 211, 177);
@@ -70,6 +89,7 @@ h4 {
 }
 h2 {
   color:var(--palepink);
+  font-size: 2rem;
 }
 /*mobile-first approach, make the work section a flexbox and set it as a column*/
 #work {
@@ -83,14 +103,16 @@ div {
 
 /*style the individual divs, using a padding formula by Matthew James Taylor*/
 #herowork {
-  flex: 3;
+  flex: 4;
   grid-area: herowork;
   padding: calc(5rem + 1.5625vw);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/radianthall.jpg");
+  background-size: cover;
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  opacity: 0.7;
 }
 
 #prework {
@@ -102,6 +124,7 @@ div {
  display: flex;
  flex-direction: column;
  justify-content: flex-end;
+ opacity: 0.7;
 }
 
 #perfume{
@@ -114,6 +137,7 @@ min-height: 40vh;
  display: flex;
  flex-direction: column;
  justify-content: flex-end;
+ opacity: 0.7;
 }
 #bookshelf {
   flex: 1;
@@ -125,6 +149,7 @@ min-height: 40vh;
  display: flex;
  flex-direction: column;
  justify-content: flex-end;
+ opacity: 0.7;
 }
 #cocktails{
   flex: 1;
@@ -136,6 +161,7 @@ max-height: 50vh;
 display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  opacity: 0.7;
 }
 
 /*style the contact section*/
@@ -147,7 +173,16 @@ display: flex;
 }
 
 /* media query for larger screens, grid layout for work section*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 700px) {
+  #about {
+    flex-direction: row;
+
+  }
+  #about img {
+    max-width: 20%;
+    max-height: 20%;
+    flex: 1;
+  }
 #herowork {
   min-height: 60vh;
 }
