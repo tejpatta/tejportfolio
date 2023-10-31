@@ -1,3 +1,7 @@
+
+:root {
+  --palepink: palevioletred;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,14 +9,14 @@
 }
 
 body {
-  background-color: #FBE7C6;
+  background-color: #f0cc90;
   margin: 0;
 }
 header {
   padding: 1.5rem;
   font-family: Garamond, Georgia, 'Times New Roman', serif;
   background-color: #B4F8C8;
-  color: palevioletred;
+  color: var(--palepink);
   display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -35,14 +39,15 @@ ul {
 ul li a {
   margin: 0.5em;
   text-decoration: none;
-  color: palevioletred;
+  color:var(--palepink);
 }
+/*style for the page sections*/
 
 .page-section{
   padding: 2rem;
   margin: 2rem;
 }
-
+/*style 'About Me' content so that the image appears next to the text and the text is 3x the size, section styled as flexbox to make it reactive to window size*/
 #about {
   display: flex;
   align-items: center;
@@ -58,66 +63,105 @@ ul li a {
   flex: 3;
   margin: 7vw;
 }
-
+/*style the headings*/
 h4 {
-  color: rgb(129, 197, 174);
+  color: rgb(110, 211, 177);
   grid-area: workhead;
 }
+h2 {
+  color:var(--palepink);
+}
+/*mobile-first approach, make the work section a flexbox and set it as a column*/
+#work {
+  display: flex;
+  flex-direction: column;
+}
+div {
+  width: fit-content;
+}
+/*make the divs inside the work section flexboxes to align the content to the bottom of them and control the growth of the herowork so it will appear larger than other divs*/
 
-
+/*style the individual divs, using a padding formula by Matthew James Taylor*/
 #herowork {
+  flex: 3;
   grid-area: herowork;
   padding: calc(5rem + 1.5625vw);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/radianthall.jpg");
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #prework {
+  flex: 1;
  grid-area: prework;
   padding: calc(5rem + 1.5625vw);
  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/clay.jpg");
- 
-
+ min-height: 40vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
 }
 
 #perfume{
+  flex: 1;
 grid-area: perfume;
   padding: calc(5rem + 1.5625vw);
 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/matt-briney-0tfz7ZoXaWc-unsplash.jpg");
-
+min-height: 40vh;
+ max-height: 50vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
 }
 #bookshelf {
+  flex: 1;
 grid-area: bookshelf;
 padding: calc(5rem + 1.5625vw);
 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/shelves.jpg");
-
-
-
-
+min-height: 40vh;
+ max-height: 50vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
 }
 #cocktails{
+  flex: 1;
 grid-area: cocktails;
 padding: calc(5rem + 1.5625vw);
 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/cocktails.jpg"); 
-
+min-height: 40vh;
+max-height: 50vh;
+display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
+/*style the contact section*/
 #contact{
-  font-family: Garamond, Georgia, 'Times New Roman', serif;
+  font-family: Garamond, Georgia, serif;
   display: flex;
-				justify-content: space-between;
-				align-items: center;
+			justify-content: space-between;
+			align-items: center;
 }
 
-/* media query for larger screens */
+/* media query for larger screens, grid layout for work section*/
 @media screen and (min-width: 992px) {
-
+#herowork {
+  min-height: 60vh;
+}
+ #perfume #bookshelf #cocktails {
+  min-height: 40vh;
+ max-height: 50vh;
+}
   #work {
     display: grid;
     margin: 0px 5%;
     grid-template-rows: 0.2fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "workhead workhead workead"
+    "workhead workhead workhead"
     "herowork herowork prework"
     "perfume bookshelf cocktails";
   }
